@@ -23,7 +23,7 @@ A dynamic 3D solar system simulation built using **Three.js** and **Vite**. This
 
 ---
 
-Follow the followinf steps to run:
+Follow the following steps to run:
 - Extract the code.
 - Make sure to install dependencies: open project in VSCode -> open command line -> type: npm install
 - Run "npm run dev".
