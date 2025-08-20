@@ -133,7 +133,7 @@ function convertToGeocentric(heliocentricPositions) {
   return geocentricPositions;
 }
 
-app.get('/', (req, res) => {
+app.get('/api/positions', (req, res) => {
   const { date } = req.query;
   
   if (!date) {
