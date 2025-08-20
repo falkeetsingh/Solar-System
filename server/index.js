@@ -213,7 +213,5 @@ app.get('/health', (req, res) => {
 
 const PORT = process.env.PORT || 3001;
 app.listen(PORT, () => {
-  console.log(`🚀 Solar System API running on http://localhost:${PORT}`);
-  console.log(`📊 astronomy-engine available: ${astronomyAvailable}`);
-  console.log(`🧪 Test: http://localhost:${PORT}/positions?date=2005-11-01`);
+  console.log(`🚀 Solar System API running on https://solar-system-silk-mu.vercel.app/`);
 });

@@ -167,7 +167,7 @@ async function setPlanetPositionsFromBackend(dateStr) {
   try {
     console.log(`Fetching positions for date: ${dateStr}`);
     
-    const response = await fetch(`http://localhost:3001/positions?date=${dateStr}`);
+    const response = await fetch(`https://solar-system-0hc9.onrender.com/?date=${dateStr}`);
     
     if (!response.ok) {
       const errorData = await response.json().catch(() => ({}));
@@ -369,7 +369,7 @@ window.testBackend = async (date = '2005-11-01') => {
   
   try {
     // First test the health endpoint
-    const healthResponse = await fetch('http://localhost:3001/health');
+    const healthResponse = await fetch('https://solar-system-0hc9.onrender.com/health');
     const healthData = await healthResponse.json();
     console.log('Backend health:', healthData);
     
@@ -385,7 +385,7 @@ window.compareMethods = async (date = '2005-11-01') => {
   console.log(`Comparing calculation methods for ${date}:`);
   
   try {
-    const response = await fetch(`http://localhost:3001/positions?date=${date}`);
+    const response = await fetch(`https://solar-system-0hc9.onrender.com/?date=${date}`);
     const data = await response.json();
     
     console.log('Calculation method used:', data.library);
