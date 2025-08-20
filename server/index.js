@@ -211,7 +211,7 @@ app.get('/health', (req, res) => {
   });
 });
 
-const PORT = process.env.PORT || 3001;
+const PORT = process.env.PORT;
 app.listen(PORT, () => {
   console.log(`🚀 Solar System API running on https://solar-system-silk-mu.vercel.app/`);
 });
