@@ -1,14 +1,61 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite App</title>
-    <link rel="stylesheet" href="./src/style.css">
-  </head>
-  <body>
-    <canvas id="canvas"></canvas>
-    <script type="module" src="/src/main.js"></script>
-  </body>
+<head>
+  <meta charset="UTF-8" />
+  <title>Solar System Simulation</title>
+  <style>
+    body, html {
+      margin: 0;
+      overflow: hidden;
+      font-family: sans-serif;
+      background: black;
+      color: white;
+    }
+
+    #controls {
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      background: rgba(0, 0, 0, 0.6);
+      padding: 12px;
+      border-radius: 8px;
+      z-index: 100;
+    }
+
+    #controls select,
+    #controls input,
+    #controls button {
+      margin-top: 8px;
+      display: block;
+      width: 160px;
+      padding: 6px;
+      border: none;
+      border-radius: 4px;
+      background: #222;
+      color: white;
+    }
+
+    canvas {
+      display: block;
+    }
+  </style>
+</head>
+<body>
+  <div id="controls">
+    <label for="modeToggle">Mode:</label>
+    <select id="modeToggle">
+      <option value="animated" selected>Animated</option>
+      <option value="real">Real (by date)</option>
+    </select>
+
+    <label for="dateInput">Date:</label>
+    <input type="date" id="dateInput" />
+
+    <button id="updateBtn">Update</button>
+  </div>
+
+  <canvas id="canvas"></canvas>
+
+  <script type="module" src="./src/main.js"></script>
+</body>
 </html>
