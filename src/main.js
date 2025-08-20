@@ -167,7 +167,7 @@ async function setPlanetPositionsFromBackend(dateStr) {
   try {
     console.log(`Fetching positions for date: ${dateStr}`);
     
-    const response = await fetch(`https://solar-system-0hc9.onrender.com/api/positons?date=${dateStr}`);
+    const response = await fetch(`https://solar-system-0hc9.onrender.com/api/positions?date=${dateStr}`);
     
     if (!response.ok) {
       const errorData = await response.json().catch(() => ({}));
